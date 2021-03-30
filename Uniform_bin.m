@@ -2,7 +2,7 @@ N = input("Choose the number of points : "); %10
 a = input("Choose the born a : "); %0
 b = input("Choose the born b : "); %2
 
-X = Rand_Piece(N);
+X = Rand_Coin(N);
 
 subplot(3,1,1)
 stairs(X, 'linewidth', 2)
