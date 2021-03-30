@@ -1,7 +1,7 @@
 N = input("Choose the number of points : ");
 a = input("Choose the born a : "); %0
 b = input("Choose the born b : "); %2
-Nc = 40; %nombre de classe, donc 40 classes
+Nc = 40; %number of classes
 
 X = VACU_ab(N, a, b);
 
@@ -14,7 +14,7 @@ title("X")
 subplot(3,1,2)
 hist(X, Nc)
 hold on
-[Cpt, m] = hist(X, Nc); %m = milieu, Cpt = comptage => courbe de tendance || plus N augmente, plus courbe tend vers 1
+[Cpt, m] = hist(X, Nc); %m = middle, Cpt = counting => trend curve || as N rise up, the curve tend t 1
 plot(m, Cpt, 'r')
 grid()
 title("Histogram of X")
@@ -22,8 +22,8 @@ xlabel("Nc")
 legend("X", "Cpt, m")
 
 subplot(3,1,3)
-P = Cpt/N * Nc * 1/(max(X)-min(X)); % *Nc pour remonter hist, Cpt/(max(X)-min(X)) pour adapter a chaque intervalle || Pk = Cpt/N
-bar(m, P, 1) %histogramme normalisé
+P = Cpt/N * Nc * 1/(max(X)-min(X)); % *Nc to raise hist, Cpt/(max(X)-min(X)) to adapt to each interval || Pk = Cpt/N
+bar(m, P, 1) %normalized histogram
 hold on
 plot(m, (1/(b-a)) * ones(Nc, 1), 'linewidth', 2) %DDP
 grid()
